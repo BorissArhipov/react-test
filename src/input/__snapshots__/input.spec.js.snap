@@ -1,57 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input component Default props should render post component 1`] = `
-<div
-  className="inputWrapper"
->
-  <i
-    className="fas fa-search"
-  />
-  <input
-    className="input"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="Click to search"
-    value=""
-  />
-</div>
-`;
-
-exports[`Input component Default props should use default on change 1`] = `
-<div
-  className="inputWrapper"
->
-  <i
-    className="fas fa-search"
-  />
-  <input
-    className="input"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="Click to search"
-    value=""
-  />
-</div>
-`;
-
 exports[`Input component should render input component 1`] = `
-<div
-  className="inputWrapper"
->
-  <i
-    className="fas fa-search"
-  />
-  <input
-    className="input"
-    onChange={[Function]}
-    onKeyPress={[Function]}
-    placeholder="Click to search"
-    value=""
-  />
-</div>
-`;
-
-exports[`Input component should render post component 1`] = `
 <div
   className="inputWrapper"
 >

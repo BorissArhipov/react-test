@@ -44,4 +44,28 @@ describe("Info component", () => {
             expect(componentWillUnmountSpy).toHaveBeenCalledTimes(1);
         });
     });
+
+    describe("Component handlers", () => {
+        it("should call addEventListener when component mounted", () => {
+            expect(window.addEventListener).toHaveBeenCalledTimes(1);
+        });
+
+        it("should call handleChangeTitle in componentDidUpdate", () => {
+            const instance = setUp().instance();
+            instance.handleChangeTitle = jest.fn();
+            instance.componentDidUpdate();
+            expect(instance.handleChangeTitle).toHaveBeenCalled();
+        });
+
+        it("should call removeEventListener when component unmounted", () => {
+            component.unmount();
+            expect(window.removeEventListener).toHaveBeenCalledTimes(1);
+        });
+
+        it("should call handleWidth diring window resize", () => {
+            expect(component.state().width).toBe(0);
+            global.dispatchEvent(new Event("resize"));
+            expect(component.state().width).toBe(window.innerWidth);
+        });
+    });
 });
